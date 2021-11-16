@@ -44,16 +44,6 @@ def convert(source:str, destination:str, orientation="P", delimiter=",",
     PDF = FPDF(orientation)
     PDF.add_page()
 
-    if font == None:
-        PDF.add_font("normal-font", "", r"Fonts\custom-font.tff", uni=True)
-    else:
-        PDF.add_font("normal-font", "", font, uni=True)        
-
-    if headerfont == None:
-        PDF.add_font("header-font", "", r"Fonts\custom-header-font.tff", uni=True)
-    else:
-        PDF.add_font("header-font", "", headerfont, uni=True)
-
     with open(source) as CSV:
         data = [row for row in csv.reader(CSV, delimiter =delimiter )]
         header = data[0]
@@ -68,7 +58,12 @@ def convert(source:str, destination:str, orientation="P", delimiter=",",
     for row in rows:
         row.extend(list(" "*(max - len(row))))
 
-    PDF.set_font("header-font", size=headersize)
+    if headerfont == None:
+        PDF.set_font("Courier", "B", size=size)
+    else:
+        PDF.add_font("header-font", "", font, uni=True) 
+        PDF.set_font("header-font", size=size)
+
     line_height = PDF.font_size * 2.5
     col_width = PDF.epw / max
     
@@ -77,7 +72,12 @@ def convert(source:str, destination:str, orientation="P", delimiter=",",
         ln=3, max_line_height=PDF.font_size)
     PDF.ln(line_height)
 
-    PDF.set_font("normal-font", size=size)
+    if font == None:
+        PDF.set_font("Courier", size=size)
+    else:
+        PDF.add_font("normal-font", "", font, uni=True) 
+        PDF.set_font("normal-font", size=size)
+    
     line_height = PDF.font_size * 2.5
 
     for cells in rows:
@@ -87,4 +87,4 @@ def convert(source:str, destination:str, orientation="P", delimiter=",",
         PDF.ln(line_height)
     
     PDF.output(destination)
-    
+   
