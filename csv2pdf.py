@@ -45,12 +45,12 @@ def convert(source:str, destination:str, orientation="P", delimiter=",",
     PDF.add_page()
 
     if font == None:
-        PDF.add_font("normal-font", "", r"Fonts\rs_normal.ttf", uni=True)
+        PDF.add_font("normal-font", "", r"Fonts\custom-font.tff", uni=True)
     else:
         PDF.add_font("normal-font", "", font, uni=True)        
 
     if headerfont == None:
-        PDF.add_font("header-font", "", r"Fonts\rs_bold.ttf", uni=True)
+        PDF.add_font("header-font", "", r"Fonts\custom-header-font.tff", uni=True)
     else:
         PDF.add_font("header-font", "", headerfont, uni=True)
 
