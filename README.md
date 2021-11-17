@@ -4,14 +4,14 @@
 
 ![](convert.png)
 
-### ***➣ Install ⚜️***
+### **➣ Install ⚜️**
 
 ```python
 pip install csv2pdf
 ```
 
 
-### ***➣ Examples 📋***
+### **➣ Examples 📋**
 
 ```python
 # Quick conversion
@@ -62,22 +62,9 @@ pip install csv2pdf
             font=r"Fonts\custom-font.tff", headerfont=r"Fonts\custom-header-font.tff")
 ```
 
-***Use **`.tff`** files for specifying font files. Fonts can be downloaded from **[Google Fonts](https://fonts.google.com/)**.***
+**Use **`.tff`** files for specifying font files. Fonts can be downloaded from ***[Google Fonts](https://fonts.google.com/)***.**
 
-
-### ***➣ Contact ☎️***
-
-***Author ➜ SOHAM DATTA***
-
-***[Telegram ➜ @tech_savvy_guy](https://t.me/tech_savvy_guy)***
-
-***[Twitter ➜ @_soham07](https://twitter.com/_soham07)***
-
-***[YouTube ➜ TECH-SAVVY-GUY](https://www.youtube.com/channel/UCIDoK2B8K8keukHsbhSia_w)***
-
-***[Email ➜ dattasoham805@gmail.com](mailto:dattasoham805@gmail.com)***
-
-### ***➣ Support 😄***
+### **➣ Support 😄**
 
 👉🏻 ***Contributions, issues, and feature requests are welcome!***
 
